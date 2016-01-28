@@ -1,1 +1,1 @@
-# aruba_networks
+# Splunk App for Aruba Networks
