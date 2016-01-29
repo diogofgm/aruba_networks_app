@@ -1,0 +1,17 @@
+<nav search_view="search" color="#F0A843">
+  <view name="overview" default='true' />
+  <view name="auth" />
+  <collection label="Threat">
+    <view name="threat_overview" />
+  </collection>
+  <collection label="Hosts">
+    <view name="host_details" />
+  </collection>
+  <collection label="Other...">
+    <view name="search" />
+    <view name="data_models" />
+    <view name="reports" />
+    <view name="alerts" />
+    <view name="dashboards" />
+  </collection>
+</nav>

@@ -1,0 +1,14 @@
+<dashboard>
+  <label>Local DB</label>
+  <row>
+    <panel>
+      <table>
+        <search>
+          <query>index=aruba process=db | top query</query>
+          <earliest>-60m@m</earliest>
+          <latest>now</latest>
+        </search>
+      </table>
+    </panel>
+  </row>
+</dashboard>
