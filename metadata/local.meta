@@ -47,3 +47,8 @@ modtime = 1453312793.917295600
 [views/threat_overview]
 version = 6.3.1
 modtime = 1453917039.126683100
+
+[indexes/aruba_networks]
+owner = admin
+version = 6.3.0
+modtime = 1454587157.520216000
