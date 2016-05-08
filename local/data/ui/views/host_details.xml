@@ -1,13 +1,22 @@
-<dashboard>
+<form>
   <label>Host Details</label>
+  <fieldset submitButton="false">
+    <input type="time" token="time range" searchWhenChanged="true">
+      <label></label>
+      <default>
+        <earliest>-60m@m</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+  </fieldset>
   <row>
     <panel>
       <title>Events per host</title>
       <chart>
         <search>
           <query>index=aruba | timechart count by host</query>
-          <earliest>-60m@m</earliest>
-          <latest>now</latest>
+          <earliest>$field1.earliest$</earliest>
+          <latest>$field1.latest$</latest>
         </search>
         <option name="charting.chart">area</option>
         <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>
@@ -36,4 +45,4 @@
       </chart>
     </panel>
   </row>
-</dashboard>
+</form>

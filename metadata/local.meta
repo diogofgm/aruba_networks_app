@@ -33,12 +33,12 @@ version = 6.3.1
 modtime = 1453916439.027658000
 
 [nav/default]
-version = 6.3.1
-modtime = 1453915776.587897100
+version = 6.4.0
+modtime = 1462453144.411316000
 
 [views/host_details]
-version = 6.3.1
-modtime = 1453915972.818155900
+version = 6.4.0
+modtime = 1462452863.580778000
 
 [app/package/check_for_updates]
 version = 6.3.1

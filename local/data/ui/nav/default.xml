@@ -1,6 +1,8 @@
 <nav search_view="search" color="#F0A843">
   <view name="overview" default='true' />
-  <view name="auth" />
+  <collection label="Authentication">
+    <view name="auth" />
+  </collection>
   <collection label="Threat">
     <view name="threat_overview" />
   </collection>
