@@ -1,5 +1,5 @@
 <nav search_view="search" color="#F0A843">
-  <view name="overview" default='true' />
+  <view name="aruba_overview" default='true' />
   <collection label="Authentication">
   	<view name="aruba_auth" />
   </collection>
