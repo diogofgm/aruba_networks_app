@@ -45,7 +45,7 @@ jobs:
           pwd
           ls -la
           cd ${GITHUB_WORKSPACE}
-          mv package TA-ibm_secretserver
+          mv package aruba_networks_app
           mkdir dist
           tar -zcvf dist/aruba_networks_app.tar.gz aruba_networks_app
           cd dist
