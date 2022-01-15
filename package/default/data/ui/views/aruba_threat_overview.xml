@@ -1,7 +1,7 @@
 <form>
   <label>Threat Overview</label>
   <fieldset submitButton="false">
-    <input type="time" token="time">
+    <input type="time" token="tk_timerange">
       <label>Time range</label>
       <default>
         <earliest>-60m@m</earliest>
@@ -15,13 +15,14 @@
       <single>
         <search>
           <query>eventtype=aruba_threat | timechart count</query>
-          <earliest>$time.earliest$</earliest>
-          <latest>$time.latest$</latest>
+          <earliest>$tk_timerange.earliest$</earliest>
+          <latest>$tk_timerange.latest$</latest>
         </search>
-        <option name="drilldown">none</option>
         <option name="colorBy">value</option>
         <option name="colorMode">none</option>
+        <option name="drilldown">none</option>
         <option name="numberPrecision">0</option>
+        <option name="refresh.display">progressbar</option>
         <option name="showSparkline">1</option>
         <option name="showTrendIndicator">1</option>
         <option name="trendColorInterpretation">standard</option>
@@ -37,10 +38,9 @@
       <chart>
         <search>
           <query>eventtype=aruba_threat | top 10 dvc_name</query>
-          <earliest>$time.earliest$</earliest>
-          <latest>$time.latest$</latest>
+          <earliest>$tk_timerange.earliest$</earliest>
+          <latest>$tk_timerange.latest$</latest>
         </search>
-        <option name="charting.chart">pie</option>
         <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>
         <option name="charting.axisLabelsX.majorLabelStyle.rotation">0</option>
         <option name="charting.axisTitleX.visibility">visible</option>
@@ -50,6 +50,7 @@
         <option name="charting.axisY.scale">linear</option>
         <option name="charting.axisY2.enabled">0</option>
         <option name="charting.axisY2.scale">inherit</option>
+        <option name="charting.chart">pie</option>
         <option name="charting.chart.bubbleMaximumSize">50</option>
         <option name="charting.chart.bubbleMinimumSize">10</option>
         <option name="charting.chart.bubbleSizeBy">area</option>
@@ -63,6 +64,7 @@
         <option name="charting.layout.splitSeries.allowIndependentYRanges">0</option>
         <option name="charting.legend.labelStyle.overflowMode">ellipsisMiddle</option>
         <option name="charting.legend.placement">right</option>
+        <option name="refresh.display">progressbar</option>
       </chart>
     </panel>
     <panel>
@@ -70,10 +72,9 @@
       <chart>
         <search>
           <query>eventtype=aruba_threat | top ssid</query>
-          <earliest>$time.earliest$</earliest>
-          <latest>$time.latest$</latest>
+          <earliest>$tk_timerange.earliest$</earliest>
+          <latest>$tk_timerange.latest$</latest>
         </search>
-        <option name="charting.chart">pie</option>
         <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>
         <option name="charting.axisLabelsX.majorLabelStyle.rotation">0</option>
         <option name="charting.axisTitleX.visibility">visible</option>
@@ -83,6 +84,7 @@
         <option name="charting.axisY.scale">linear</option>
         <option name="charting.axisY2.enabled">0</option>
         <option name="charting.axisY2.scale">inherit</option>
+        <option name="charting.chart">pie</option>
         <option name="charting.chart.bubbleMaximumSize">50</option>
         <option name="charting.chart.bubbleMinimumSize">10</option>
         <option name="charting.chart.bubbleSizeBy">area</option>
@@ -96,6 +98,7 @@
         <option name="charting.layout.splitSeries.allowIndependentYRanges">0</option>
         <option name="charting.legend.labelStyle.overflowMode">ellipsisMiddle</option>
         <option name="charting.legend.placement">right</option>
+        <option name="refresh.display">progressbar</option>
       </chart>
     </panel>
   </row>

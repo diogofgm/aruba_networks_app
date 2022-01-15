@@ -1,10 +1,10 @@
 <form>
-  <label>Auth</label>
+  <label>Authentication</label>
   <fieldset submitButton="false">
-    <input type="time" token="time_range">
+    <input type="time" token="tk_timerange" searchWhenChanged="true">
       <label></label>
       <default>
-        <earliest>-15m</earliest>
+        <earliest>-60m@m</earliest>
         <latest>now</latest>
       </default>
     </input>
@@ -16,8 +16,8 @@
         <search>
           <query>`aruba_index` sourcetype="aruba:authmgr" user=*
 | timechart count</query>
-          <earliest>$time_range.earliest$</earliest>
-          <latest>$time_range.latest$</latest>
+          <earliest>$tk_timerange.earliest$</earliest>
+          <latest>$tk_timerange.latest$</latest>
         </search>
         <option name="charting.chart">column</option>
         <option name="charting.drilldown">none</option>
@@ -31,10 +31,11 @@
       <table>
         <search>
           <query>`aruba_index` user!="*:*" | top limit=0 user</query>
-          <earliest>$time_range.earliest$</earliest>
-          <latest>$time_range.latest$</latest>
+          <earliest>$tk_timerange.earliest$</earliest>
+          <latest>$tk_timerange.latest$</latest>
         </search>
         <option name="drilldown">cell</option>
+        <option name="refresh.display">progressbar</option>
         <drilldown>
           <set token="user">$click.value$</set>
         </drilldown>
@@ -45,14 +46,15 @@
       <table depends="$user$">
         <search>
           <query>`aruba_index` user=$user$ | chart  sparkline count by dev_type | sort -count</query>
-          <earliest>$time_range.earliest$</earliest>
-          <latest>$time_range.latest$</latest>
+          <earliest>$tk_timerange.earliest$</earliest>
+          <latest>$tk_timerange.latest$</latest>
         </search>
-        <option name="wrap">true</option>
-        <option name="rowNumbers">false</option>
+        <option name="count">10</option>
         <option name="dataOverlayMode">none</option>
         <option name="drilldown">cell</option>
-        <option name="count">10</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">false</option>
+        <option name="wrap">true</option>
       </table>
     </panel>
   </row>
