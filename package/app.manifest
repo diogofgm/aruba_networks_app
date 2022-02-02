@@ -1,0 +1,51 @@
+{
+    "dependencies": null,
+    "incompatibleApps": null,
+    "info": {
+        "author": [
+            {
+                "company": null,
+                "email": null,
+                "name": "diogofgm"
+            }
+        ],
+        "classification": {
+            "categories": [],
+            "developmentStatus": null,
+            "intendedAudience": null
+        },
+        "commonInformationModels": null,
+        "description": "Aruba Networks App for Splunk",
+        "id": {
+            "group": null,
+            "name": "aruba_networks_app",
+            "version": "0.0.0R9d35b9c"
+        },
+        "license": {
+            "name": null,
+            "text": null,
+            "uri": null
+        },
+        "privacyPolicy": {
+            "name": null,
+            "text": null,
+            "uri": null
+        },
+        "releaseDate": null,
+        "releaseNotes": {
+            "name": null,
+            "text": null,
+            "uri": null
+        },
+        "title": "Aruba Networks"
+    },
+    "inputGroups": null,
+    "platformRequirements": null,
+    "schemaVersion": "2.0.0",
+    "supportedDeployments": [
+        "_standalone",
+        "_distributed"
+    ],
+    "targetWorkloads": null,
+    "tasks": null
+}
