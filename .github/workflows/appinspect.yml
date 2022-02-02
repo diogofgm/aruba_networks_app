@@ -6,10 +6,14 @@ on:
       - "develop"
     tags:
       - "v[0-9]+.[0-9]+.[0-9]+"
+    paths-ignore:
+      - '.github/**'
   pull_request:
     branches:
       - "main"
       - "develop"
+    paths-ignore:
+      - '.github/**'
   
 jobs:
    build:
