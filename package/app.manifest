@@ -19,7 +19,7 @@
         "id": {
             "group": null,
             "name": "aruba_networks_app",
-            "version": "0.0.0R9d35b9c"
+            "version": "0.1.1"
         },
         "license": {
             "name": null,
