@@ -5,8 +5,8 @@
 - Splunk 7.0 or newer
 
 ## Installation
-Install the add-on on: 
-Search Heads - The add-on contains search time extractions 
+Install the add-on on:
+Search Heads - The add-on contains search time extractions
 
 
 ## Configuration
