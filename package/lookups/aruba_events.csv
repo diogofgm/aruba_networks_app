@@ -1,0 +1,6 @@
+"event_id","event_description","event_cause","event_recommended_action","event_category"
+"323001","RFD process initialization failed","","","System Emergency Messages"
+"330203","MESHD process initialization failed.","MESHD process initialization failed possibly because the mesh-node is not correctly provisioned.","Re-provision the AP. Contact your technical support provider if this problem persists.","System Emergency Messages"
+"330204","MESHD process exiting.","No MESH role was specified.","Re-provision the AP. Contact your technical support provider if this problem persists.","System Emergency Messages"
+"330205","MESHD process exiting.","No MESH cluster profile was specified.","Re-provision the AP. Contact your technical support provider if this problem persists.","System Emergency Messages"
+"341008","No description available.","","","System Emergency Messages"
