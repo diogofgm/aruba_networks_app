@@ -1,13 +1,13 @@
 <nav search_view="search" color="#F0A843">
-  <view name="aruba_overview" default='true' />
+  <view name="aruba_networks_overview" default='true' />
   <collection label="Authentication">
-  	<view name="aruba_auth" />
+  	<view name="aruba_networks_auth" />
   </collection>
   <collection label="Threat">
-    <view name="aruba_threat_overview" />
+    <view name="aruba_networks_threat_overview" />
   </collection>
   <collection label="Hosts">
-    <view name="aruba_host_details" />
+    <view name="aruba_networks_host_details" />
   </collection>
   <collection label="Other...">
     <view name="search" />
