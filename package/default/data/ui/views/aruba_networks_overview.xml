@@ -1,8 +1,5 @@
 <form version="1.1">
-  <init>
-    <set token="test">false</set>
-  </init>
-  <label>Aruba Overview</label>
+  <label>Overview</label>
   <fieldset submitButton="true" autoRun="true">
     <input type="time" token="timerange">
       <label></label>
@@ -16,7 +13,7 @@
     <panel>
       <single>
         <search>
-          <query>`aruba_index` | stats dc(host)</query>
+          <query>`aruba_index` sourcetype="aruba*" | stats dc(host) AS dc_hosts</query>
           <earliest>$timerange.earliest$</earliest>
           <latest>$timerange.latest$</latest>
         </search>
@@ -29,34 +26,36 @@
     <panel>
       <single>
         <search>
-          <query>`aruba_index` | timechart count</query>
+          <query>`aruba_index` sourcetype="aruba*" | timechart count</query>
           <earliest>$timerange.earliest$</earliest>
           <latest>$timerange.latest$</latest>
         </search>
         <option name="drilldown">none</option>
         <option name="rangeColors">["0x53a051","0x0877a6","0xf8be34","0xf1813f","0xdc4e41"]</option>
+        <option name="refresh.display">progressbar</option>
         <option name="underLabel">Events over time</option>
       </single>
     </panel>
     <panel>
       <single>
         <search>
-          <query>`aruba_index` | stats dc(dest)</query>
+          <query>`aruba_index` sourcetype="aruba*" | stats dc(dest)</query>
           <earliest>$timerange.earliest$</earliest>
           <latest>$timerange.latest$</latest>
         </search>
         <option name="drilldown">none</option>
         <option name="rangeColors">["0x53a051","0x0877a6","0xf8be34","0xf1813f","0xdc4e41"]</option>
+        <option name="refresh.display">progressbar</option>
         <option name="underLabel">Distinct Clients</option>
       </single>
     </panel>
   </row>
   <row>
     <panel>
-      <title>Events over time by type</title>
+      <title>Events over time by sourcetype</title>
       <chart>
         <search>
-          <query>`aruba_index` | timechart count by log_type</query>
+          <query>`aruba_index` sourcetype="aruba*" | timechart limit=0 count by sourcetype</query>
           <earliest>$timerange.earliest$</earliest>
           <latest>$timerange.latest$</latest>
         </search>
