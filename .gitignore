@@ -12,3 +12,4 @@ addon_builder.conf
 # Other
 .vscode
 build/
+package/lookups/aruba_events_wip.csv
